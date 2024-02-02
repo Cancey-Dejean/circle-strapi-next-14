@@ -1,0 +1,31 @@
+.btn-base {
+  @apply min-w-[175px] text-black tracking-[1px] py-[25px] px-4 uppercase rounded-[100px] flex items-center justify-center transition-all duration-[.5s] font-button overflow-hidden relative;
+}
+
+.btn-base:hover .btn-bg {
+  @apply scale-100;
+}
+
+.btn-bg {
+  @apply absolute w-[280px] h-[280px] scale-0  rounded-full flex justify-center items-center transition-all duration-[.5s];
+}
+
+.btn-prime {
+  @apply bg-[#ebc7b5];
+}
+
+.btn-prime:hover .btn-bg {
+  @apply bg-white;
+}
+
+.btn-prime-secondary {
+  @apply bg-white;
+}
+
+.btn-prime-secondary:hover .btn-bg {
+  @apply bg-[#ebc7b5];
+}
+
+.btn-text {
+  @apply relative;
+}

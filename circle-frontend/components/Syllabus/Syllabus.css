@@ -1,0 +1,49 @@
+/* Syllabus */
+.syllabus {
+  @apply py-[100px] lg:py-[200px] px-5;
+}
+
+.syllabus-inner {
+  @apply grid gap-y-[80px] items-center max-w-[800px] mx-auto xl:grid-cols-2 xl:gap-x-[30px] xl:max-w-full;
+}
+
+.syllabus-img {
+  @apply max-w-[350px] lg:max-w-[602px] mx-auto xl:ml-0 xl:sticky xl:top-[100px];
+}
+
+.syllabus-step {
+  @apply relative px-[40px] lg:pl-[74px] lg:pr-[80px];
+}
+
+.step-alt {
+  @apply my-[50px] px-[40px] sm:pl-0 sm:pr-0 sm:ml-[100px] lg:my-[120px] lg:pl-[74px] xl:my-[60px];
+}
+
+.syllabus-steps .section-title {
+  @apply text-center xl:text-left;
+}
+
+.syllabus-step-num {
+  @apply relative inline-block mb-[15px] lg:mb-0 lg:absolute lg:left-0 lg:-top-[10px];
+}
+
+.syllabus-num-text {
+  @apply absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] flex justify-center items-center font-title text-[#f8efe5] font-bold text-center -tracking-[.01em] lg:transform-none lg:left-0 lg:right-0 lg:top-0 lg:bottom-0;
+}
+
+.step-arrow-wrap {
+  @apply absolute left-auto top-[10px] right-0 bottom-auto overflow-hidden w-[74px] hidden sm:block;
+}
+
+.step-alt .step-arrow-wrap {
+  @apply -left-[100px];
+}
+
+.step-alt .step-arrow-wrap img {
+  transform: rotateX(0) rotateY(180deg) rotateZ(0);
+}
+
+.syllabus-step:nth-child(3) .step-arrow-wrap {
+  @apply w-[148px];
+}
+/* End of Syllabus */

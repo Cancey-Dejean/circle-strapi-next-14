@@ -1,0 +1,9 @@
+/* Social Proof */
+.social-proof {
+  @apply grid grid-cols-2 items-center justify-between max-w-[600px] mx-auto gap-[30px] py-[80px] lg:gap-0 lg:max-w-[1080px] lg:py-[65px] lg:flex;
+}
+
+.social-proof img {
+  @apply flex justify-self-center lg:block lg:px-[20px] h-11 object-contain;
+}
+/* End of Social Proof */

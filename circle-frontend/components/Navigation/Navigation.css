@@ -1,0 +1,41 @@
+/* Nav */
+.nav-header {
+  @apply absolute top-0 left-0 w-full py-[30px] lg:py-[40px] px-5 z-10;
+}
+
+.nav-header .animate-link {
+  @apply pt-2 mx-9;
+}
+
+.nav-header .container {
+  @apply flex items-center justify-between;
+}
+
+.hamburger {
+  @apply flex items-center justify-center lg:hidden text-white;
+}
+
+.nav-logo {
+  @apply w-[100px] lg:w-[189px];
+}
+
+.nav-logo svg {
+  @apply h-[55px];
+}
+
+.nav-logo svg path {
+  @apply fill-white;
+}
+
+.nav-menu {
+  @apply hidden lg:flex;
+}
+
+.nav-right {
+  @apply hidden lg:flex items-center gap-x-[24px];
+}
+
+.header-cta {
+  @apply !py-[17px] min-h-[auto];
+}
+/* End of Nav */

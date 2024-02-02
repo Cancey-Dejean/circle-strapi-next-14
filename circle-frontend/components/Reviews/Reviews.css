@@ -1,0 +1,115 @@
+/* Reviews */
+.reviews {
+  @apply py-[100px] sm:py-[150px] lg:py-[200px] px-5;
+}
+
+.reviews-header {
+  @apply text-center;
+}
+
+.reviews-dash {
+  @apply hidden absolute right-0 bottom-0 h-[136px] w-[2px] bg-[url('/images/dash-vertical.svg')] lg:block;
+}
+
+.ava-circle {
+  @apply absolute left-0 top-[5px] z-[1] w-[22px] h-[22px] border-2 border-black rounded-[50%];
+}
+
+.ava-spot {
+  @apply absolute -bottom-[5px] left-[18px] z-[1];
+}
+
+.ava-dot {
+  @apply absolute right-0 top-[15px] z-[1] w-[8px] h-[8px] bg-black rounded-[50%];
+}
+
+.review-grid {
+  @apply flex flex-col gap-20 lg:gap-0 lg:flex-row max-w-[500px] mx-auto lg:max-w-full;
+}
+
+.review-grid .item-num {
+  @apply min-h-[130px] max-w-[123px] mx-auto mb-[40px];
+}
+
+.review-grid .review-item {
+  @apply relative lg:px-[30px] xl:px-[70px];
+}
+
+.review-grid .review-item:nth-child(2) .ava-circle {
+  left: auto;
+  top: 10px;
+  right: 0px;
+  height: 28px;
+  width: 28px;
+}
+
+.review-grid .review-item:nth-child(2) .ava-dot {
+  left: -5px;
+  top: 23px;
+  right: auto;
+}
+
+.review-grid .review-item:nth-child(2) .ava-spot {
+  left: auto;
+  right: 2px;
+  bottom: 4px;
+}
+
+.review-grid .review-item:nth-child(3) .ava-circle {
+  left: auto;
+  top: auto;
+  right: -1px;
+  bottom: 0px;
+  height: 20px;
+  width: 20px;
+}
+
+.review-grid .review-item:nth-child(3) .ava-dot {
+  left: -24px;
+  top: 33px;
+  right: auto;
+}
+
+.review-grid .review-item:nth-child(3) .ava-spot {
+  left: auto;
+  top: 0px;
+  right: 12px;
+  bottom: auto;
+}
+
+.review-grid .review-item:nth-child(3) .reviews-dash {
+  background-image: none;
+}
+
+.reviews .review-item {
+  flex: 1;
+  text-align: center;
+}
+
+.reviews .item-num {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.reviews .item-num img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviews .item-num-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  --tw-translate-x: -50%;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  font-family: filson-pro, sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+/* End of Reviews */

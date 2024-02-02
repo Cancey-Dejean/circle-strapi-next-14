@@ -1,0 +1,59 @@
+/* hero */
+.hero {
+  @apply bg-[url('/images/hero.svg')] bg-no-repeat bg-cover bg-[left_center] pt-[150px] md:pt-[240px] pb-[100px] px-5 text-white rounded-b-none sm:pb-[65px] lg:rounded-b-[100px];
+}
+
+.hero-inner-content {
+  @apply grid gap-[60px] items-center lg:gap-[20px] lg:grid-cols-2;
+}
+
+.hero-inner-text {
+  @apply flex flex-col items-center text-center lg:items-start lg:text-left;
+}
+
+.hero-title {
+  @apply font-title leading-[1.2em] tracking-[-.02em] font-light flex flex-col mb-[20px] text-[40px] sm:leading-[1em] sm:text-[60px] lg:mb-[40px] xl:text-[78px];
+}
+
+.hero-desc {
+  @apply max-w-[400px] mx-auto mb-[40px] sm:mb-[48px] lg:ml-0;
+}
+
+.hero-btn {
+  @apply min-w-[260px];
+}
+
+.hero-inner-imgs {
+  @apply relative max-w-[600px] mx-auto  lg:max-w-full lg:-top-[20px];
+}
+
+.hero-inner-content img {
+  @apply w-full;
+}
+
+.paper-plane {
+  @apply absolute top-[5px] right-0 max-w-[90px];
+}
+/* End of hero */
+
+/* hero Stats */
+.hero-stats {
+  @apply bg-[#f8efe5] rounded-[50px] py-[50px] p-[40px] gap-y-[70px] text-center grid max-w-[700px] mx-auto sm:px-[80px] lg:gap-x-[70px] lg:flex lg:justify-between lg:max-w-full;
+}
+
+.hero-stat-item {
+  @apply flex-1;
+}
+
+.hero .item-num {
+  @apply relative mb-[28px];
+}
+
+.hero .item-num img {
+  @apply mx-auto;
+}
+
+.hero .item-num-text {
+  @apply absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-[60px] font-title font-bold text-black;
+}
+/* End of hero Stats */
