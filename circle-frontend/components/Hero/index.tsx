@@ -28,13 +28,13 @@ export default function Hero({ className }: Props) {
                 as="a"
                 href="#"
                 variant="primary"
+                size="large"
                 className="hero-btn"
               >
-                Hellp
+                START FOR FREE
               </ButtonLink>
             </div>
 
-            {/* <!--  hero Images --> */}
             <div className="hero-inner-imgs">
               <Image
                 className="person-img"
@@ -61,8 +61,8 @@ export default function Hero({ className }: Props) {
           <div className="hero-stats">
             <StatCard
               icon="/images/hero_numb.svg"
-              text="150+"
-              desc="Experts share their knowledge on building and growing a web presence."
+              text="200+"
+              desc="Ideal courses to sell physical and digital products from your site on WordPress.com"
             />
             <StatCard
               icon="/images/hero_numb.svg"
@@ -71,8 +71,8 @@ export default function Hero({ className }: Props) {
             />
             <StatCard
               icon="/images/hero_numb.svg"
-              text="150+"
-              desc="Experts share their knowledge on building and growing a web presence."
+              text="10k+"
+              desc="Small businesses and online stores call WordPress.com home. No code, no complexities."
             />
 
             {/* <div className="hero-stat-item">

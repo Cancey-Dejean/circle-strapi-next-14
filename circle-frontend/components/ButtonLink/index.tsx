@@ -28,7 +28,8 @@ export const ButtonLink = ({
         className,
         variant === "primary" ? "btn-prime" : "",
         variant === "secondary" ? "btn-prime-secondary" : "",
-        size === "large" ? "min-w-[260px]" : ""
+        size === "large" ? "min-w-[260px]" : "",
+        size === "medium" ? "!py-4" : ""
       )}
       {...rest}
     >

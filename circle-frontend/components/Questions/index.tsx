@@ -32,7 +32,7 @@ export default function Questions({}: Props) {
                 </div>
 
                 <div className="btn-container">
-                  <ButtonLink as="button" type="button">
+                  <ButtonLink as="button" type="button" size="large">
                     Submit
                   </ButtonLink>
                 </div>

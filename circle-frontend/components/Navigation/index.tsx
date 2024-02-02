@@ -47,7 +47,6 @@ export default function Navigation({}: Props) {
             </Link>
           </div>
 
-          {/* <!-- Hamburger --> */}
           <div className="hamburger">
             <button type="button">
               <svg
@@ -67,7 +66,6 @@ export default function Navigation({}: Props) {
             </button>
           </div>
 
-          {/* <!-- Menu --> */}
           <nav className="nav-menu">
             {mainMenu.map((item, index) => (
               <Link href={item.url} className="animate-link" key={index}>
@@ -82,12 +80,7 @@ export default function Navigation({}: Props) {
             </div>
 
             <div className="nav-cta">
-              <ButtonLink
-                as="a"
-                href="#"
-                variant="secondary"
-                className="header-cta"
-              >
+              <ButtonLink as="a" href="#" variant="secondary" size="medium">
                 Sign In
               </ButtonLink>
             </div>
