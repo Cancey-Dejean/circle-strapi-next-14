@@ -16,11 +16,11 @@
 }
 
 .nav-logo {
-  @apply w-[100px] lg:w-[189px];
+  @apply lg:max-w-[189px];
 }
 
 .nav-logo svg {
-  @apply h-[55px];
+  @apply h-[55px] w-full;
 }
 
 .nav-logo svg path {
