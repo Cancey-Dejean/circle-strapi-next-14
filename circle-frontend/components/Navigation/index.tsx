@@ -14,7 +14,7 @@ export default function Navigation({}: Props) {
       <header className="nav-header">
         <div className="container">
           <div className="nav-logo">
-            <Link href="/">
+            <Link href="/" className="flex">
               <svg fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.9">
                   <path
