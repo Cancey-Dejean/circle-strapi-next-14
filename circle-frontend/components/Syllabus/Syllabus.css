@@ -12,11 +12,11 @@
 }
 
 .syllabus-step {
-  @apply relative px-[40px] lg:pl-[74px] lg:pr-[80px];
+  @apply relative px-[10px] lg:pl-[74px] lg:pr-[80px];
 }
 
 .step-alt {
-  @apply my-[50px] px-[40px] sm:pl-0 sm:pr-0 sm:ml-[100px] lg:my-[120px] lg:pl-[74px] xl:my-[60px];
+  @apply my-[50px] px-[10px] sm:pl-0 sm:pr-0 sm:ml-[100px] lg:my-[120px] lg:pl-[74px] xl:my-[60px];
 }
 
 .syllabus-steps .section-title {

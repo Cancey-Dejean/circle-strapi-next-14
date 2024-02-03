@@ -20,6 +20,7 @@ export default function ReviewCard({
           width={123}
           height={116}
           alt={name || "Review's Name"}
+          className="h-[116px] object-contain"
         />
 
         <Image
