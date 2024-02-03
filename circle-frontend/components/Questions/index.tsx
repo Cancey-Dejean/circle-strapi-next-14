@@ -1,5 +1,6 @@
 import Image from "next/image"
-import { ButtonLink } from "../ButtonLink"
+import NewsletterForm from "../NewsletterForm"
+import "./Questions.css"
 
 type Props = {}
 
@@ -18,26 +19,7 @@ export default function Questions({}: Props) {
               best training format.
             </p>
 
-            <form action="#" className="form">
-              <div className="form-inner">
-                <div className="input-wrap">
-                  <input
-                    type="email"
-                    name="email"
-                    id=""
-                    placeholder="Your email"
-                    className="input-field"
-                    required
-                  />
-                </div>
-
-                <div className="btn-container">
-                  <ButtonLink as="button" type="button" size="large">
-                    Submit
-                  </ButtonLink>
-                </div>
-              </div>
-            </form>
+            <NewsletterForm />
           </div>
 
           <div className="questions-img">

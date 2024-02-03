@@ -1,0 +1,65 @@
+/* Questions */
+.questions {
+  @apply bg-[url('/images/bg_questions.svg')] bg-no-repeat bg-[left_center] text-white rounded-[50px] py-[100px] bg-cover px-5;
+}
+
+.questions-inner {
+  @apply grid gap-[80px] justify-center items-center max-w-[1200px] mx-auto xl:grid-cols-2 xl:justify-start xl:gap-[30px];
+}
+
+.questions-text {
+  @apply lg:max-w-[530px] text-center xl:text-left;
+}
+
+.questions-title {
+  @apply mb-[40px];
+}
+
+.questions-text .subheading {
+  @apply mb-[40px];
+}
+
+.questions .form-inner {
+  @apply flex flex-col lg:flex-row gap-[16px];
+}
+
+.questions .input-wrap {
+  @apply flex flex-1 min-h-[70px];
+}
+
+.questions-img {
+  @apply relative;
+}
+
+.main-q-img {
+  @apply mx-auto relative z-[1];
+}
+
+.main-q-img-bg {
+  @apply absolute bottom-0;
+}
+
+.plane {
+  @apply absolute left-0 top-0 sm:left-[22px] sm:top-[53px];
+}
+
+.questions-circle-border {
+  @apply hidden w-[16px] h-[16px] border border-black rounded-[50%] absolute right-[106px] bottom-[354px] md:block;
+}
+
+.questions-circle-color {
+  @apply hidden w-[20px] h-[20px] bg-[#ebc7b5] rounded-[50%] absolute left-[35px] bottom-[206px] md:block;
+}
+
+.questions-circle-dot {
+  @apply hidden w-[8px] h-[8px] bg-black rounded-[50%] absolute left-[95px] bottom-[186px] md:block;
+}
+
+.questions .field-group {
+  @apply flex flex-col;
+}
+
+.questions .btn-container .btn-prime {
+  @apply w-full sm:w-auto;
+}
+/* End of Questions */

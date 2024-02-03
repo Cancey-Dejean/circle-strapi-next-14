@@ -32,7 +32,7 @@
 }
 
 .step-arrow-wrap {
-  @apply absolute left-auto top-[10px] right-0 bottom-auto overflow-hidden w-[74px] hidden sm:block;
+  @apply absolute left-auto top-[10px] right-0 bottom-auto overflow-hidden w-[74px] hidden md:block;
 }
 
 .step-alt .step-arrow-wrap {

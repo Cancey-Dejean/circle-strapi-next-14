@@ -1,5 +1,6 @@
 import Image from "next/image"
 import ServiceCard from "../Cards/ServiceCard"
+import "./Services.css"
 
 type Props = {}
 

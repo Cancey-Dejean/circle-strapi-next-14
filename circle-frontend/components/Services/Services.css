@@ -1,0 +1,82 @@
+/* Services */
+.services {
+  @apply bg-[url('/images/bg_courses.svg')] bg-no-repeat bg-cover bg-center py-[100px] rounded-[50px] xl:py-[200px] px-5;
+}
+
+.services-header {
+  @apply flex flex-col gap-[30px] text-center items-center justify-between text-white mb-[64px] max-w-[800px] mx-auto xl:max-w-full xl:flex-row xl:text-left;
+}
+
+.service-card-head {
+  @apply relative z-[1];
+}
+
+.services-title {
+  @apply mb-0;
+}
+
+.service-desc {
+  @apply max-w-[520px] text-[22px] opacity-70;
+}
+
+.services-inner {
+  @apply flex flex-col xl:flex-row gap-[60px];
+}
+
+.service-card {
+  @apply bg-[#f8efe5] min-h-[300px] pt-[40px] pb-[56px] px-[32px] overflow-hidden rounded-[40px] relative z-[2] flex flex-col gap-[30px] justify-between mx-auto  md:min-h-[400px] xl:min-h-[500px] max-w-full w-full lg:max-w-[600px] xl:max-w-[415px];
+}
+
+.service-card-tag {
+  @apply mb-[16px] text-[22px] tracking-[1px] uppercase;
+}
+
+.service-title {
+  @apply mb-0;
+}
+
+.service-img-container {
+  @apply hidden absolute right-0 bottom-0 z-[1] sm:block;
+}
+
+.service-img {
+  @apply relative;
+}
+
+.services .hr-hand {
+  @apply absolute right-[68px] bottom-[53px] w-[22px] h-[6px] bg-[#9b5c8f] rounded-[100px] transform -rotate-[20deg] transition-all duration-[.3s] ease-in-out;
+}
+
+.service-card:hover .hr-hand {
+  @apply rotate-[20deg] bottom-[58px];
+}
+
+.service-img-item-2,
+.service-img-item-2-alt {
+  @apply absolute bottom-0 right-0 transition-all duration-[.4s] ease-in-out;
+}
+
+.service-img-item-2 {
+  @apply opacity-0;
+}
+
+.service-card:hover .service-img-item-2 {
+  @apply opacity-100;
+}
+
+.service-read-more {
+  @apply pr-[32px] text-[#0f86a1] text-[22px] tracking-[.01em] uppercase font-[300] bg-[url('/images/ico_arrow-blue.svg')] bg-no-repeat bg-[right_50%] self-start transition-all duration-[.2s] relative z-[1];
+}
+
+.service-card:hover .service-read-more {
+  @apply lg:pr-[40px];
+}
+
+.services .bg-hover {
+  @apply hidden absolute -left-[100px] top-auto right-auto -bottom-[100px] h-0 w-0 bg-white rounded-[1000px] will-change-[width_height] transition-all duration-[.4s] ease-in-out z-0 lg:block;
+}
+
+.service-card:hover .bg-hover {
+  @apply h-[800px] w-[800px] scale-125;
+}
+/* End of Services */

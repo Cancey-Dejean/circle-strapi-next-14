@@ -1,19 +1,18 @@
+"use client"
 import Link from "next/link"
 import "./Navigation.css"
-import Image from "next/image"
 import { ButtonLink } from "../ButtonLink"
 import { mainMenu } from "@/data"
 import SearchModal from "../SearchModal"
+import MobileMenu from "../MobileMenu"
 
 type Props = {}
 
 export default function Navigation({}: Props) {
   return (
     <>
-      {/* <!-- Nav --> */}
       <header className="nav-header">
         <div className="container">
-          {/* <!-- Logo --> */}
           <div className="nav-logo">
             <Link href="/">
               <svg fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,24 +46,7 @@ export default function Navigation({}: Props) {
             </Link>
           </div>
 
-          <div className="hamburger">
-            <button type="button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+          <MobileMenu />
 
           <nav className="nav-menu">
             {mainMenu.map((item, index) => (
