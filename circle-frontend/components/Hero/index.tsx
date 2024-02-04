@@ -1,44 +1,55 @@
-import { ButtonLink } from "../ButtonLink"
+import Image from "next/image"
+import { config } from "@/libs/config"
+import { ButtonLink, ButtonLinkProps } from "../ButtonLink"
 import StatCard from "../Cards/StatCard"
 import SocialProof from "../SocialProof"
 import "./Hero.css"
-import Image from "next/image"
 
 type Props = {
+  title: string
+  desc?: string
+  image?: string
+  btnLabel?: string
+  btnUrl?: string
+  btnVariant?: ButtonLinkProps["variant"]
+  btnSize?: ButtonLinkProps["size"]
   className?: string
 }
 
-export default function Hero({ className }: Props) {
+export default function Hero({
+  title,
+  desc,
+  image,
+  className,
+  btnLabel,
+  btnUrl,
+  btnVariant,
+  btnSize,
+}: Props) {
   return (
     <section className={`hero ${className}`}>
       <div className="hero-inner">
         <div className="container">
           <div className="hero-inner-content">
             <div className="hero-inner-text">
-              <h1 className="hero-title">
-                Your next big <span>idea starts here</span>
-              </h1>
+              <h1 className="hero-title">{title}</h1>
 
-              <p className="subheading hero-desc">
-                The ideal framework to learn how to manage all aspects of
-                startup.
-              </p>
+              <p className="subheading hero-desc">{desc}</p>
 
               <ButtonLink
                 as="a"
-                href="#"
-                variant="primary"
-                size="large"
+                url={btnUrl || "#"}
+                variant={btnVariant}
+                size={btnSize}
                 className="hero-btn"
-              >
-                START FOR FREE
-              </ButtonLink>
+                label={btnLabel}
+              />
             </div>
 
             <div className="hero-inner-imgs">
               <Image
                 className="person-img"
-                src="/images/hero_illustr.svg"
+                src={config.api + image || "/images/hero_illustr-person.svg"}
                 alt="Person in chair"
                 width={603}
                 height={497}

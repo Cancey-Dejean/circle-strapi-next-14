@@ -2,13 +2,13 @@ import "./ButtonLink.css"
 import { cn } from "../../libs/utils"
 import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react"
 
-type ButtonLinkProps = {
+export type ButtonLinkProps = {
   as: "a" | "button"
   variant?: "primary" | "secondary"
   size?: "medium" | "large"
-  href?: string
+  url?: string
   className?: string
-  children?: React.ReactNode
+  label?: React.ReactNode
 } & AnchorHTMLAttributes<HTMLAnchorElement> &
   ButtonHTMLAttributes<HTMLButtonElement>
 
@@ -16,7 +16,8 @@ export const ButtonLink = ({
   as = "a",
   variant = "primary",
   size = "medium",
-  children,
+  label,
+  url,
   className = "",
   ...rest
 }: ButtonLinkProps) => {
@@ -31,11 +32,12 @@ export const ButtonLink = ({
         size === "large" ? "min-w-[260px]" : "",
         size === "medium" ? "!py-4" : ""
       )}
+      href={url}
       {...rest}
     >
       <div className="btn-bg"></div>
 
-      <span className="btn-text">{children || "Text goes here"}</span>
+      <span className="btn-text">{label || "Text goes here"}</span>
     </Element>
   )
 }

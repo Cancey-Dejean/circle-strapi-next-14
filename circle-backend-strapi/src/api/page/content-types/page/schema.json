@@ -4,7 +4,8 @@
   "info": {
     "singularName": "page",
     "pluralName": "pages",
-    "displayName": "page"
+    "displayName": "page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,6 +21,13 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "Blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.hero",
+        "components.button"
+      ]
     }
   }
 }

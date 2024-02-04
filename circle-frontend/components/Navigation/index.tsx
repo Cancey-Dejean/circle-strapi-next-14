@@ -62,9 +62,13 @@ export default function Navigation({}: Props) {
             </div>
 
             <div className="nav-cta">
-              <ButtonLink as="a" href="#" variant="secondary" size="medium">
-                Sign In
-              </ButtonLink>
+              <ButtonLink
+                as="a"
+                href="#"
+                variant="secondary"
+                size="medium"
+                label="Sign In"
+              />
             </div>
           </div>
         </div>

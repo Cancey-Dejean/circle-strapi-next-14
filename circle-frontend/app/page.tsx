@@ -11,8 +11,9 @@ const getPages = async () => {
       Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`,
     },
   }
+
   const request = await fetch(
-    `${config.api}/api/pages?populate=*&filters[title][$eq]=home`,
+    `${config.api}/api/pages?populate[Blocks][populate]=*&filters[slug][$eq]=home`,
     requestOptions
   )
 
@@ -21,11 +22,22 @@ const getPages = async () => {
 }
 
 export default async function Home() {
-  const pages = await getPages()
-  console.log(pages.data)
+  const page = await getPages()
+  const data = page.data[0].attributes.Blocks[0]
+
+  console.log(data.button.url)
+
   return (
     <>
-      <Hero />
+      <Hero
+        title={data.title}
+        desc={data.desc}
+        image={data.image.data.attributes.url}
+        btnLabel={data.button.label}
+        btnUrl={data.button.url}
+        btnVariant={data.button.variant}
+      />
+
       <Syllabus />
       <Services />
       <Reviews />
