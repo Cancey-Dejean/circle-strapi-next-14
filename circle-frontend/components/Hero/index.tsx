@@ -1,8 +1,6 @@
 import Image from "next/image"
 import { config } from "@/libs/config"
 import { ButtonLink, ButtonLinkProps } from "../ButtonLink"
-import StatCard from "../Cards/StatCard"
-import SocialProof from "../SocialProof"
 import "./Hero.css"
 
 type Props = {
@@ -13,6 +11,7 @@ type Props = {
   btnUrl?: string
   btnVariant?: ButtonLinkProps["variant"]
   btnSize?: ButtonLinkProps["size"]
+  children?: React.ReactNode
   className?: string
 }
 
@@ -25,6 +24,7 @@ export default function Hero({
   btnUrl,
   btnVariant,
   btnSize,
+  children,
 }: Props) {
   return (
     <section className={`hero ${className}`}>
@@ -49,7 +49,7 @@ export default function Hero({
             <div className="hero-inner-imgs">
               <Image
                 className="person-img"
-                src={config.api + image || "/images/hero_illustr-person.svg"}
+                src={config.api + image}
                 alt="Person in chair"
                 width={603}
                 height={497}
@@ -65,51 +65,7 @@ export default function Hero({
             </div>
           </div>
 
-          {/* <!-- Social Proof --> */}
-          <SocialProof />
-
-          {/* <!-- hero Stats --> */}
-          <div className="hero-stats">
-            <StatCard
-              icon="/images/hero_numb.svg"
-              text="200+"
-              desc="Ideal courses to sell physical and digital products from your site on WordPress.com"
-            />
-            <StatCard
-              icon="/images/hero_numb.svg"
-              text="150+"
-              desc="Experts share their knowledge on building and growing a web presence."
-            />
-            <StatCard
-              icon="/images/hero_numb.svg"
-              text="10k+"
-              desc="Small businesses and online stores call WordPress.com home. No code, no complexities."
-            />
-
-            {/* <div className="hero-stat-item">
-              <div className="item-num">
-                <img src="/images/hero_numb.svg" alt="Background art" />
-                <div className="item-num-text">150+</div>
-              </div>
-
-              <div className="item-p">
-                Experts share their knowledge on building and growing a web
-                presence.
-              </div>
-            </div> */}
-
-            {/* <div className="hero-stat-item">
-              <div className="item-num">
-                <img src="/images/hero_numb.svg" alt="Background art" />
-                <div className="item-num-text">10k+</div>
-              </div>
-
-              <div className="item-p">
-                Small businesses and online stores call WordPress.com home. No
-                code, no complexities.
-              </div>
-            </div> */}
-          </div>
+          {children}
         </div>
       </div>
     </section>

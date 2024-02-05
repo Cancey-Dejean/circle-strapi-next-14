@@ -26,7 +26,11 @@
       "type": "dynamiczone",
       "components": [
         "sections.hero",
-        "components.button"
+        "components.button",
+        "sections.social-proof",
+        "components.stat-card",
+        "sections.hero-stats",
+        "sections.syllabus"
       ]
     }
   }

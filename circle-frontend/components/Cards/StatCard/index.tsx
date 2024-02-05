@@ -1,15 +1,21 @@
+import Image from "next/image"
+
 type Props = {
-  icon?: string
-  text: string
+  statText: string
   desc: string
 }
 
-export default function StatCard({ icon, text, desc }: Props) {
+export default function StatCard({ statText, desc }: Props) {
   return (
     <div className="hero-stat-item">
       <div className="item-num">
-        <img src={icon} alt="" />
-        <div className="item-num-text">{text || 10}</div>
+        <Image
+          src="/images/hero_numb.svg"
+          alt="Card Circle"
+          width={177}
+          height={114}
+        />
+        <div className="item-num-text">{statText}</div>
       </div>
 
       <p className="item-p">{desc}</p>

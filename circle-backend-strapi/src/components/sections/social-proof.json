@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_social_proofs",
+  "info": {
+    "displayName": "SocialProof",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_components_step_cards",
+  "info": {
+    "displayName": "StepCard",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "imgArrow": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "altCard": {
+      "type": "boolean"
+    }
+  }
+}
