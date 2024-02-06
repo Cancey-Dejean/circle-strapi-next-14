@@ -9,30 +9,6 @@ import Syllabus from "@/components/Syllabus"
 import { config } from "@/libs/config"
 import Image from "next/image"
 
-const steps = [
-  {
-    number: "01",
-    title: "Videos from professionals",
-    desc: "Our specialists will help you create any website. With our help, you can handle any task, also you get a personalized consultation.",
-    imgArrow: "/images/steps_arrow.svg",
-    altCard: false,
-  },
-  {
-    number: "02",
-    title: "Practical independent work",
-    desc: "Learn how to organize your website, create engaging content, protect your site, and achieve search engine rankings.",
-    imgArrow: "/images/steps_arrow.svg",
-    altCard: true,
-  },
-  {
-    number: "03",
-    title: "Feedback from specialists",
-    desc: "Structure and visualize new knowledge. You send the practical work to the reviewing specialists and receive individual feedback.",
-    imgArrow: "/images/steps_arrow-plane.svg",
-    altCard: false,
-  },
-]
-
 const getPages = async () => {
   const requestOptions = {
     headers: {
@@ -41,19 +17,24 @@ const getPages = async () => {
   }
 
   const request = await fetch(
-    `${config.api}/api/pages?populate[Blocks][populate]=*&filters[slug][$eq]=home`,
+    `${config.api}/api/pages?populate[Blocks][populate]=*`,
     requestOptions
   )
 
   const response = await request.json()
   return response
 }
-
+// http://localhost:1337/api/pages?populate=Blocks.StepCard&populate=Blocks.StatCard&filters[slug][$eq]=home
+// /api/pages?populate[Blocks][populate]=*&filters[slug][$eq]=home
 export default async function Home() {
   const page = await getPages()
   const data = page.data[0].attributes.Blocks
+  // const data = page.data[0].attributes.Blocks
 
-  console.log(data[3].image.data.attributes.alternativeText)
+  // console.log(data[0].title)
+  // console.log(data[1].StepCard)
+  // console.log(data[2].StepCard)
+  console.log(data[3].StepCard)
 
   return (
     <>
@@ -98,20 +79,36 @@ export default async function Home() {
 
       <Syllabus
         title={data[3].title}
-        image={data[3].image.data.attributes.formats.thumbnail.url}
+        image={data[3].image.data.attributes.url}
         imageAlt={data[3].image.data.attributes.alternativeText}
       >
         <div className="syllabus-step-list">
-          {steps.slice(0, 3).map((step, index) => (
-            <StepCard
-              title={step.title}
-              number={step.number}
-              desc={step.desc}
-              key={index}
-              altCard={step.altCard}
-              imgArrow={step.imgArrow}
-            />
-          ))}
+          {data[3].StepCard.slice(0, 3).map(
+            ({
+              id,
+              number,
+              title,
+              desc,
+              altCard,
+              imgArrow,
+            }: {
+              id: number
+              number: string
+              title: string
+              desc: string
+              altCard: boolean
+              imgArrow: string
+            }) => (
+              <StepCard
+                title={title}
+                number={number}
+                desc={desc}
+                key={id}
+                altCard={altCard}
+                imgArrow={imgArrow}
+              />
+            )
+          )}
         </div>
       </Syllabus>
 

@@ -24,7 +24,7 @@ export default function StepCard({
           height={53}
           alt="Step 1"
         />
-        <div className="syllabus-num-text">{number}</div>
+        <div className="syllabus-num-text">0{number}</div>
       </div>
 
       <h3 className="item-title">{title}</h3>
