@@ -17,7 +17,7 @@ const getPages = async () => {
   }
 
   const request = await fetch(
-    `${config.api}/api/pages?populate[Blocks][populate]=*`,
+    `${config.api}/api/pages?populate[Blocks][populate]=*&filters[slug][$eq]=home`,
     requestOptions
   )
 
@@ -31,14 +31,14 @@ export default async function Home() {
   const data = page.data[0].attributes.Blocks
   // const data = page.data[0].attributes.Blocks
 
-  // console.log(data[0].title)
+  console.log(data[0].title)
   // console.log(data[1].StepCard)
   // console.log(data[2].StepCard)
-  console.log(data[3].StepCard)
+  // console.log(data[3].StepCard)
 
   return (
     <>
-      <Hero
+      {/* <Hero
         title={data[0].title}
         desc={data[0].desc}
         image={data[0].image.data.attributes.url}
@@ -75,9 +75,9 @@ export default async function Home() {
             )
           )}
         </HeroStats>
-      </Hero>
+      </Hero> */}
 
-      <Syllabus
+      {/* <Syllabus
         title={data[3].title}
         image={data[3].image.data.attributes.url}
         imageAlt={data[3].image.data.attributes.alternativeText}
@@ -110,7 +110,7 @@ export default async function Home() {
             )
           )}
         </div>
-      </Syllabus>
+      </Syllabus> */}
 
       <Services />
       <Reviews />
