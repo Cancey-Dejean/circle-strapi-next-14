@@ -1,10 +1,10 @@
 /* Nav */
 .nav-header {
-  @apply absolute top-0 left-0 w-full py-[30px] lg:py-[40px] px-5 z-10;
+  @apply absolute left-0 top-0 z-10 w-full px-5 py-[30px] lg:py-[40px];
 }
 
 .nav-header .animate-link {
-  @apply pt-2 mx-9;
+  @apply mx-9 pt-2;
 }
 
 .nav-header .container {
@@ -12,7 +12,7 @@
 }
 
 .hamburger {
-  @apply flex items-center justify-center lg:hidden text-white;
+  @apply flex items-center justify-center text-white lg:hidden;
 }
 
 .nav-logo {
@@ -32,10 +32,10 @@
 }
 
 .nav-right {
-  @apply hidden lg:flex items-center gap-x-[24px];
+  @apply hidden items-center gap-x-[24px] lg:flex;
 }
 
 .header-cta {
-  @apply !py-[17px] min-h-[auto];
+  @apply min-h-[auto] !py-[17px];
 }
 /* End of Nav */

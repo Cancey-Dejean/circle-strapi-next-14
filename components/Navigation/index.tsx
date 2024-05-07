@@ -1,12 +1,12 @@
-"use client"
-import Link from "next/link"
-import "./Navigation.css"
-import { ButtonLink } from "../ButtonLink"
-import { mainMenu } from "@/data"
-import SearchModal from "../SearchModal"
-import MobileMenu from "../MobileMenu"
+"use client";
+import Link from "next/link";
+import "./Navigation.css";
+import { ButtonLink } from "../ButtonLink";
+import { mainMenu } from "@/data";
+import SearchModal from "../SearchModal";
+import MobileMenu from "../MobileMenu";
 
-type Props = {}
+type Props = {};
 
 export default function Navigation({}: Props) {
   return (
@@ -74,5 +74,5 @@ export default function Navigation({}: Props) {
         </div>
       </header>
     </>
-  )
+  );
 }

@@ -1,19 +1,19 @@
-import Image from "next/image"
-import { config } from "@/libs/config"
-import { ButtonLink, ButtonLinkProps } from "../ButtonLink"
-import "./Hero.css"
+import Image from "next/image";
+import { config } from "@/libs/config";
+import { ButtonLink, ButtonLinkProps } from "../ButtonLink";
+import "./Hero.css";
 
 type Props = {
-  title: string
-  desc?: string
-  image?: string
-  btnLabel?: string
-  btnUrl?: string
-  btnVariant?: ButtonLinkProps["variant"]
-  btnSize?: ButtonLinkProps["size"]
-  children?: React.ReactNode
-  className?: string
-}
+  title: string;
+  desc?: string;
+  image?: string;
+  btnLabel?: string;
+  btnUrl?: string;
+  btnVariant?: ButtonLinkProps["variant"];
+  btnSize?: ButtonLinkProps["size"];
+  children?: React.ReactNode;
+  className?: string;
+};
 
 export default function Hero({
   title,
@@ -49,7 +49,7 @@ export default function Hero({
             <div className="hero-inner-imgs">
               <Image
                 className="person-img"
-                src={config.api + image}
+                src={image || "/images/hero_illustr.svg"}
                 alt="Person in chair"
                 width={603}
                 height={497}
@@ -69,5 +69,5 @@ export default function Hero({
         </div>
       </div>
     </section>
-  )
+  );
 }

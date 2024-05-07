@@ -1,14 +1,14 @@
-import Image from "next/image"
-import StepCard from "../Cards/StepCard"
-import "./Syllabus.css"
-import { config } from "@/libs/config"
+import Image from "next/image";
+import StepCard from "../Cards/StepCard";
+import "./Syllabus.css";
+import { config } from "@/libs/config";
 
 type Props = {
-  children: React.ReactNode
-  title: string
-  image: string
-  imageAlt: string
-}
+  children: React.ReactNode;
+  title: string;
+  image: string;
+  imageAlt: string;
+};
 
 export default function Syllabus({ children, title, image, imageAlt }: Props) {
   return (
@@ -18,7 +18,7 @@ export default function Syllabus({ children, title, image, imageAlt }: Props) {
           <div className="syllabus-inner">
             <div className="syllabus-img">
               <Image
-                src={config.api + image}
+                src={image || "/images/computer-couch.png"}
                 width={602}
                 height={444}
                 alt={imageAlt}
@@ -33,5 +33,5 @@ export default function Syllabus({ children, title, image, imageAlt }: Props) {
         </div>
       </div>
     </section>
-  )
+  );
 }
