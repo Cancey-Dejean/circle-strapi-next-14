@@ -5,8 +5,6 @@ import Questions from "@/components/Questions";
 import Reviews from "@/components/Reviews";
 import Services from "@/components/Services";
 import SocialProof from "@/components/SocialProof";
-import Syllabus from "@/components/Syllabus";
-import { config } from "@/libs/config";
 import Image from "next/image";
 
 export default function Home() {
